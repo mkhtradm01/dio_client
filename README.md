@@ -11,17 +11,22 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages). 
 -->
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+This is a simplified implementation of (Dio)[https://pub.dev/dio]
+it targets junior developers that need to quickly have http implementation in their 
+applications.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+This package has only four (4) methods for now, viz are:
+1) getRequest
+2) postRequest
+3) updateRequest
+4) deleteRequest
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+Kindly initialize the DioClient object with your baseUrl and start accessing the
+methods. 
 
 ## Usage
 
@@ -29,11 +34,24 @@ TODO: Include short and useful examples for package users. Add longer examples
 to `/example` folder. 
 
 ```dart
-const like = 'sample';
+///[baseUrl]
+const baseUrl = 'https://jsonplaceholder.typicode.com';
+///[Dioclient] object instantiation
+final dioClient = DioClient(baseUrl: baseUrl);
+try{
+    ///calling of the methods
+    final response = await dioClient.getRequest(path: '/posts');
+    if(response.statusCode == 200){
+        debugPrint(response.data);
+    }else{
+        debugPrint(response.statusMessage);
+    }
+}on Exception catch(e){
+    debugPrint('Error: $e');
+}
 ```
 
 ## Additional information
 
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+TODO: This package will be improved from time to time. Contribution is highly welcomed, 
+you can fork the repo and submit PR.
