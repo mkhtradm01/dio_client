@@ -1,10 +1,10 @@
 name: dio_client
 description: A simplified[Dio](https://pub.dev/packages/dio) implementation, it targets junior developers that need to quickly have http implementation in their applications.
-version: 0.0.1+1
+version: 0.0.1+2
 homepage: https://github.com/mkhtradm01/dio_client
 
 environment:
-  sdk: ">=2.17.3 <3.0.0"
+  sdk: ">=2.17.1 <3.0.0"
   flutter: ">=1.17.0"
 
 dependencies:
@@ -13,10 +13,18 @@ dependencies:
     sdk: flutter
   very_good_analysis: ^3.0.1
 
+platforms:
+  android:
+  ios:
+  web:
+  macOS:
+  windows:
+
 dev_dependencies:
 
-  flutter_lints: ^2.0.0
+  flutter_lints: ^2.0.1
   flutter_test:
     sdk: flutter
+  lints: ^2.0.0
 
 flutter:

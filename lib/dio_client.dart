@@ -23,6 +23,7 @@ class DioClient {
   late Dio client;
 
   ///This contains all other base options like headers, contentType
+  ///
   ///though not all endpoints use the same headers, so we will just leave it
   ///like this, can be updated whenever we need a universal options to be added.
   final _baseOptions = BaseOptions(
@@ -32,6 +33,7 @@ class DioClient {
   );
 
   ///[contentType] can be any, default is set to application/json
+  ///
   ///[onSendProgress] is a callback which takes sentData and totalData to track
   ///the progress of what is uploading or sent to server,
   ///[onReceiveProgress] is another callback to keep track of downloads or
@@ -49,7 +51,7 @@ class DioClient {
   }) async {
     final requestBody = jsonEncode(body);
     //holds request options
-    final _options = Options(
+    final options = Options(
       responseType: ResponseType.json,
       contentType: contentType,
     );
@@ -62,7 +64,7 @@ class DioClient {
         queryParameters: queryParameters,
         onSendProgress: onSendProgress,
         onReceiveProgress: onReceiveProgress,
-        options: _options,
+        options: options,
         data: requestBody,
       );
       debugPrint('================API RESPONSE================');
@@ -77,6 +79,7 @@ class DioClient {
   }
 
   ///[contentType] can be any, default is set to application/json
+  ///
   ///[onReceiveProgress] is another callback to keep track of downloads or
   ///data to be received.
   ///[queryParameters] takes parameters for the request query.
@@ -88,7 +91,7 @@ class DioClient {
     String contentType = 'application/json',
   }) async {
     //holds request options
-    final _options = Options(
+    final options = Options(
       responseType: ResponseType.json,
       contentType: contentType,
     );
@@ -100,7 +103,7 @@ class DioClient {
         path,
         queryParameters: queryParameters,
         onReceiveProgress: onReceiveProgress,
-        options: _options,
+        options: options,
       );
 
       debugPrint('================API RESPONSE================');
@@ -114,6 +117,7 @@ class DioClient {
   }
 
   ///[contentType] can be any, default is set to application/json
+  ///
   ///[queryParameters] takes parameters for the request query.
   ///[path] is the endpoint path.
   ///[body] is the content of the request, can be null.
@@ -123,10 +127,10 @@ class DioClient {
     Map<String, dynamic>? body,
     String contentType = 'application/json; charset=UTF-8',
   }) async {
-    final _requestBody = jsonEncode(body);
+    final requestBody = jsonEncode(body);
 
     //holds request options
-    final _options = Options(
+    final options = Options(
       responseType: ResponseType.json,
       contentType: contentType,
     );
@@ -137,8 +141,8 @@ class DioClient {
       final response = await client.delete<dynamic>(
         path,
         queryParameters: queryParameters,
-        options: _options,
-        data: _requestBody,
+        options: options,
+        data: requestBody,
       );
 
       debugPrint('================API RESPONSE================');
@@ -152,6 +156,7 @@ class DioClient {
   }
 
   ///[contentType] can be any, default is set to application/json
+  ///
   ///[onSendProgress] is a callback which takes sentData and totalData to track
   ///the progress of what is uploading or sent to server,
   ///[onReceiveProgress] is another callback to keep track of downloads or
@@ -167,10 +172,10 @@ class DioClient {
     void Function(int, int)? onSendProgress,
     void Function(int, int)? onReceiveProgress,
   }) async {
-    final _requestBody = jsonEncode(body);
+    final requestBody = jsonEncode(body);
 
     //holds request options
-    final _options = Options(
+    final options = Options(
       responseType: ResponseType.json,
       contentType: contentType,
     );
@@ -181,8 +186,8 @@ class DioClient {
       final response = await client.put<dynamic>(
         path,
         queryParameters: queryParameters,
-        options: _options,
-        data: _requestBody,
+        options: options,
+        data: requestBody,
         onSendProgress: onSendProgress,
         onReceiveProgress: onReceiveProgress,
       );
