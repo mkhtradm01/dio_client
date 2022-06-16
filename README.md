@@ -51,3 +51,4 @@ try{
 ## Additional information
 
 More information can be found on [Website](https://github.com/mkhtradm01/dio_client)
+Credits goes to [Dio](https://pub.dev/dio) contributors as this package depends on it.
