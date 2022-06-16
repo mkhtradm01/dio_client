@@ -11,7 +11,7 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages). 
 -->
 
-This is a simplified implementation of [Dio](https://pub.dev/dio)
+This is a simplified implementation of [Dio](https://pub.dev/packages/dio)
 it targets junior developers that need to quickly have http implementation in their 
 applications.
 
@@ -51,4 +51,4 @@ try{
 ## Additional information
 
 More information can be found on [Website](https://github.com/mkhtradm01/dio_client)
-Credits goes to [Dio](https://pub.dev/dio) contributors as this package depends on it.
+Credits goes to [Dio](https://pub.dev/packages/dio) contributors as this package depends on it.

@@ -1,6 +1,6 @@
 name: dio_client
 description: A simplified DIO implementation.
-version: 0.0.1
+version: 0.0.1+1
 homepage: https://github.com/mkhtradm01/dio_client
 
 environment:
