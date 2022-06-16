@@ -11,7 +11,7 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages). 
 -->
 
-This is a simplified implementation of (Dio)[https://pub.dev/dio]
+This is a simplified implementation of [Dio](https://pub.dev/dio)
 it targets junior developers that need to quickly have http implementation in their 
 applications.
 
@@ -29,9 +29,6 @@ Kindly initialize the DioClient object with your baseUrl and start accessing the
 methods. 
 
 ## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
 
 ```dart
 ///[baseUrl]
@@ -53,5 +50,4 @@ try{
 
 ## Additional information
 
-TODO: This package will be improved from time to time. Contribution is highly welcomed, 
-you can fork the repo and submit PR.
+More information can be found on [Website](https://github.com/mkhtradm01/dio_client)
