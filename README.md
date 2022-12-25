@@ -12,7 +12,7 @@ and the Flutter guide for
 -->
 
 This is a simplified implementation of [Dio](https://pub.dev/packages/dio)
-it targets junior developers that need to quickly have http implementation in their 
+it targets developers that need to quickly have http implementation in their 
 applications.
 
 ## Features
